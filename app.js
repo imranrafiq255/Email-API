@@ -2,7 +2,7 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
