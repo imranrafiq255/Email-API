@@ -4,10 +4,10 @@ const cors = require("cors");
 const app = express();
 require("dotenv").config();
 const port = process.env.PORT || 3001;
+console.log(process.env.MY_EMAIL);
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-console.log(process.env.EMAIL);
 app.get("/", (req, res) => {
   res.json({
     success: true,
@@ -19,8 +19,8 @@ app.post("/send-email", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASS,
+      user: process.env.MY_EMAIL,
+      pass: process.env.MY_PASS,
     },
   });
 

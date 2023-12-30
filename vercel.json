@@ -11,5 +11,9 @@
       "src": "/(.*)",
       "dest": "/app.js"
     }
-  ]
+  ],
+  "env": {
+    "MY_EMAIL": "mohammedimranrafique@gmail.com",
+    "MY_PASS": "toboxtdbrpteeqxb"
+  }
 }
